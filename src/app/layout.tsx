@@ -5,8 +5,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lama Dev School Management Dashboard",
-  description: "Next.js School Management System",
+  title: "Otta Chicken Farm | Inventory Management System",
+  description: "OttaFarm Inventory Management System",
+  icons: {
+    icon: '/favicon.ico', // PNG format
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+     
+      <body className={inter.className}>{children} </body>
+  
     </html>
   );
 }
