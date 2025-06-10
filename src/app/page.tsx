@@ -1,6 +1,12 @@
+import NavbarHome from "@/components/NavbarHome"
+import Login from "@/components/Login"
+
 const Homepage = () => {
   return (
-    <div className=''>Homepage</div>
+   <>
+   <NavbarHome />
+   <Login />
+   </>
   )
 }
 

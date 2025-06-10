@@ -1,3 +1,133 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.react-calendar {
+    width: 100% !important;
+    border: none !important;
+    font-family: 'Inter', sans-serif !important;
+
+}
+
+.react-calendar__navigation__label__labelText {
+   font-weight: 600 !important;
+}
+
+.react-calendar__tile--active {
+    background-color: #64e18a !important;
+    color:  black !important;
+}
+
+.rbc-btn-group:first-child {
+    display: none !important;
+}
+
+.rbc-toolbar-label {
+    text-align: right !important;
+    padding: 0px 20px !important;
+}
+.rbc-btn-group:last-child {
+    font-size: 13px;
+}
+.rbc-btn-group:last-child button {
+    border: none !important;
+    background-color: #f1f0ff !important;
+    margin-left: 2px !important;
+}
+.rbc-toolbar button.rbc-active {
+    background-color: #64e18a !important;
+   box-shadow: none !important;
+}
+.rbc-time-view{
+    border-color: #eee !important;
+}
+.rbc-time-header{
+    display:none !important;
+}
+.rbc-time-content {
+    border: none !important;
+}
+.rbc-time-gutter.rbc-time-column {
+    font-size: 12px !important;
+}
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+   padding: 0px 20px !important;
+}
+.rbc-timeslot-group {
+    background-color: #f7fdff !important;
+}
+
+.rbc-day-slot {
+    font-size: 14px !important;
+   
+}   
+
+.rbc-event{
+    border: none !important;
+    color: rgb(255, 255, 255) !important;
+    padding: 10px !important;
+    margin: 10px !important;
+    width: 99% !important;
+}
+/* Existing light pink, could be used as an accent if you like it, but not from logo */
+.rbc-event {
+    background-color: #f5b8ae !important; /* Your current pink */
+}
+/* --- Refined Color Palette based on Otta Farm Logo --- */
+/* Green from the main seal: */
+.rbc-event:nth-child(1) {
+    background-color: #61A848 !important; /* Vibrant green from seal */
+    color: #FFFFFF !important; /* White text for excellent contrast */
+}
+
+/* Red from the main ribbon: */
+.rbc-event:nth-child(2) {
+    background-color: #D11919 !important; /* Strong red from ribbon */
+    color: #FFFFFF !important; /* White text for excellent contrast */
+}
+
+/* Light Blue from the sky/river: */
+.rbc-event:nth-child(3) {
+    background-color: #90CAF9 !important; /* Soft blue from sky/river */
+    color: #333333 !important; /* Dark grey text for contrast on light background */
+}
+
+/* A slightly darker green (from shaded parts of logo landscape/seal): */
+.rbc-event:nth-child(4) {
+    background-color: #4A8C34 !important; /* Darker, richer green */
+    color: #FFFFFF !important;
+}
+
+/* Another shade of red (perhaps a bit lighter or an accent from within the ribbon gradient): */
+.rbc-event:nth-child(5) {
+    background-color: #E24F4F !important; /* A slightly lighter red, still from the logo's red family */
+    color: #FFFFFF !important;
+}
+
+/* Another shade of light blue or very light green (from lighter sky/highlights): */
+.rbc-event:nth-child(6) {
+    background-color: #C0E6F7 !important; /* Very light blue/sky color */
+    color: #333333 !important; /* Dark grey text for readability */
+}
+
+/* White event with a border from the logo's green: */
+.rbc-event:nth-child(7) {
+    background-color: #FFFFFF !important; /* Pure white */
+    border: 1px solid #61A848 !important; /* Border in the main green */
+    color: #333333 !important; /* Dark grey text */
+}
+
+/* A subtle orange/yellow from the landscape/sun within the logo could be used for an 8th option */
+.rbc-event:nth-child(8) {
+    background-color: #FFC107 !important; /* A warm yellow/orange from the logo's highlights */
+    color: #333333 !important; /* Dark grey text for readability */
+}
+
+.rbc-event-label{
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+    margin-bottom: 5px !important;
+  
+    
+}

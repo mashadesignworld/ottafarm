@@ -917,42 +917,47 @@ export const announcementsData = [
 
 
 // YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
+const today = new Date();
+const year = today.getFullYear();
+const month = today.getMonth();
+const date = today.getDate();
+
 export const calendarEvents = [
   {
     title: "Math",
     allDay: false,
-    start: new Date(2024, 7, 12, 8, 0),
-    end: new Date(2024, 7, 12, 8, 45),
+start: new Date(year, month, date, 8, 0),
+    end: new Date(year, month, date, 8, 45),
   },
   {
     title: "English",
     allDay: false,
-    start: new Date(2024, 7, 12, 9, 0),
-    end: new Date(2024, 7, 12, 9, 45),
+start: new Date(year, month, date, 9, 0),
+    end: new Date(year, month, date, 9, 45),
   },
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 12, 10, 0),
-    end: new Date(2024, 7, 12, 10, 45),
+   start: new Date(year, month, date, 10, 0),
+    end: new Date(year, month, date, 10, 45),
   },
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 7, 12, 11, 0),
-    end: new Date(2024, 7, 12, 11, 45),
+   start: new Date(year, month, date, 13, 0),
+    end: new Date(year, month, date, 13, 45),
   },
   {
     title: "Chemistry",
     allDay: false,
-    start: new Date(2024, 7, 12, 13, 0),
-    end: new Date(2024, 7, 12, 13, 45),
+   start: new Date(year, month, date, 14, 0),
+    end: new Date(year, month, date, 14, 45),
   },
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 12, 14, 0),
-    end: new Date(2024, 7, 12, 14, 45),
+   start: new Date(year, month, date, 15, 0),
+    end: new Date(year, month, date, 15, 45),
   },
   {
     title: "English",
@@ -963,14 +968,14 @@ export const calendarEvents = [
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 13, 10, 0),
-    end: new Date(2024, 7, 13, 10, 45),
+ start: new Date(year, month, date, 16, 0),
+    end: new Date(year, month, date, 16, 45),
   },
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 7, 13, 11, 0),
-    end: new Date(2024, 7, 13, 11, 45),
+ start: new Date(year, month, date, 17, 0),
+    end: new Date(year, month, date, 17, 45),
   },
 
   {
