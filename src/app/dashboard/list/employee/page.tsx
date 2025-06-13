@@ -1,6 +1,29 @@
 import Pagination from "@/components/Pagination"
+import Table from "@/components/Table"
 import TableSearch from "@/components/TableSearch"
 import Image from "next/image"
+
+
+const info = [ 
+    {
+    header: "Info",
+    accessor: "info"
+ 
+    },
+    {
+    header: "Employee Id",
+    accessor: "employeeId",
+    className: "hidden md:table-cell"
+ 
+    },
+      {
+    header: "Designation",
+    accessor: "designation",
+    className: "hidden md:table-cell"
+ 
+    },
+     
+]
 const EmployeeList =()=> {
     return (
         <>
@@ -23,8 +46,10 @@ const EmployeeList =()=> {
                     </div>
                    </div>
               </div>
-        </div>
+                <Table />
         <Pagination />
+        </div>
+      
         </>
     )
 }
