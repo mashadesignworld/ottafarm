@@ -6,8 +6,13 @@ const EmployeeList =()=> {
         
           <div className='flex items-center justify-between p-4'>
                    All Employees
-                   <div>
+                   <div className="">
                     <TableSearch />
+                    <div className="">
+                        <button>
+                        <Image src="/filter.png" alt="filter" width={14} height={14}/>
+                        </button>
+                    </div>
                    </div>
               </div>
         </div>
