@@ -17,7 +17,7 @@ const NavbarHome = () => {
             className="mr-2 rounded-md shadow-sm" // Subtle shadow on the logo itself
             priority // For better LCP on initial load
           />
-          <span className="font-bold text-xl text-green-600">Otta Farm</span>
+          <span className="hidden md:block font-bold text-xl text-green-600">Otta Farm</span>
         </Link>
 
         {/* Navigation Buttons on the Right */}
