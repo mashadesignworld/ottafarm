@@ -2,6 +2,22 @@ import Pagination from "@/components/Pagination"
 import Table from "@/components/Table"
 import TableSearch from "@/components/TableSearch"
 import Image from "next/image"
+import Link from "next/link"
+import { role, employeeData } from "@/lib/data";
+
+type Employee = {
+  
+    id: number;
+    info: string;
+    employeeId: string;
+    name: string;
+    email?: string;
+    photo: string;
+    designation: string[];
+    mobile: string;
+    address: string;
+    action: string;
+}
 
 
 const info = [ 
@@ -19,12 +35,61 @@ const info = [
       {
     header: "Designation",
     accessor: "designation",
-    className: "hidden md:table-cell"
+    className: "hidden lg:table-cell"
  
     },
+      {
+    header: "Mobile",
+    accessor: "mobile",
+    className: "hidden lg:table-cell"
+ 
+    },
+      {
+    header: "Address",
+    accessor: "address",
+    className: "hidden lg:table-cell"
+ 
+    },
+    {
+    header: "Actions",
+    accessor: "action",
+    }
      
 ]
 const EmployeeList =()=> {
+
+    const renderRow = (item:Employee) => (
+        <tr key={item.id} className="border-b hover:bg-gray-50 transition-colors">
+            <td>
+              
+                    <Image src={item.photo} alt="" width={40} height={40} className="md:hidden xl:block w-10 h-10 object-cover rounded-full"/>
+                    <div className="flex flex-col">
+                    <h3 className="font-semibold">{item.name}</h3>
+                     <p className="text-xs text-gray-500">{item?.email}</p>
+                    </div>
+               
+            </td>
+                <td className="hidden md:table-cell">{item.employeeId}</td>
+                <td className="hidden md:table-cell">{item.designation.join(",")}</td>
+                <td className="hidden md:table-cell">{item.mobile}</td>
+                <td className="hidden md:table-cell">{item.address}</td>
+                <td className="hidden md:table-cell">{item.employeeId}</td>
+            <td>
+              <div className="flex items-center gap-2">
+              <Link href={`/list/employee/${item.id}`} >
+                  <button className="w-7 h-7 flex items-center justify-center rounded-full bg-red-500 ">
+                    <Image src="/view.png" alt="view" width={16} height={16}/>
+                  
+                  </button>
+               </Link>
+               {role === "admin" && (<button className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500">
+                    <Image src="/delete.png" alt="view" width={16} height={16}/>
+                  
+                  </button>)}
+               </div>
+            </td>
+            </tr>
+    )
     return (
         <>
         <div className="bg-white p-4 rounded-lg shadow-md flex-1 m-4 mt-0">
@@ -46,7 +111,7 @@ const EmployeeList =()=> {
                     </div>
                    </div>
               </div>
-                <Table />
+                <Table columns={info} renderRow={renderRow} data={employeeData} />
         <Pagination />
         </div>
       
