@@ -12,15 +12,22 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "./src",                            // ✅ Ensures paths like "@/..." work
+    "paths": {
+      "@/*": ["*"]                                 // ✅ Maps "@/components/*" → "src/components/*"
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/api/auth/next-auth.d.ts"             // ✅ Ensure custom types like session.role are included
+  ],
   "exclude": ["node_modules"]
 }

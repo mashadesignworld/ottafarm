@@ -1,7 +1,9 @@
+// components/Login.tsx (assuming this is where your component lives)
 "use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc"; // Import Google icon from react-icons
+import { signIn } from "next-auth/react"; // Import signIn function
 
 const Login = () => {
   return (
@@ -31,11 +33,7 @@ const Login = () => {
         {/* Google SSO Button */}
         <div className="mb-6">
           <button
-            onClick={() => {
-              // Handle Google SSO login here.
-              // If using NextAuth.js: signIn('google');
-              console.log('Attempting Google SSO Login...');
-            }}
+            onClick={() => signIn('google', { callbackUrl: '/dashboard/admin' })} // <-- IMPORTANT CHANGE HERE
             className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm text-lg font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-300"
           >
             <FcGoogle className="mr-3 text-2xl" /> {/* Google Icon */}
@@ -94,4 +92,5 @@ const Login = () => {
     </div>
   );
 }
+
 export default Login;

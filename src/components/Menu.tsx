@@ -26,8 +26,8 @@ const menuItems = [
       
       {
         icon: "/calendar.png",
-        label: "Events",
-        href: "/list/events",
+        label: "Expenses",
+        href: "/dashboard/expenses",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
